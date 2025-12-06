@@ -1,0 +1,27 @@
+nathanpatrick:
+  name: Nathan Patrick
+  title: Cybersecurity Engineer, CloudFit Software
+  url: https://nathanpatrick.org/
+  image_url: https://media.licdn.com/dms/image/v2/D4E03AQEdMqaEyWis-Q/profile-displayphoto-shrink_200_200/B4EZdM6JBjHIAY-/0/1749341999580?e=2147483647&v=beta&t=PALGKVlUgsjdX8_AqZVRUINAGD50Co4BugoKqBdIBsM
+    # page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    # permalink: '/nathan-patrick'
+  socials:
+    x: nathanpatrick
+    linkedin: about-nathan-patrick
+    github: grpchatdstryr
+    newsletter: https://www.github.com/grpchatdstryr.png
+
+slorber:
+  name: Sébastien Lorber
+  title: Docusaurus maintainer
+  url: https://sebastienlorber.com
+  image_url: https://github.com/slorber.png
+  page:
+    # customize the url of the author page at /blog/authors/<permalink>
+    permalink: '/all-sebastien-lorber-articles'
+  socials:
+    x: sebastienlorber
+    linkedin: sebastienlorber
+    github: slorber
+    newsletter: https://thisweekinreact.com
