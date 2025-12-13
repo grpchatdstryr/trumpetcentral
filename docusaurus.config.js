@@ -88,7 +88,7 @@ const config = {
         title: '',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/banner.png',
+          src: 'img/banner-icon.png',
         },
         items: [
           {
