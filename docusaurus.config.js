@@ -85,10 +85,10 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: '',
+        title: 'Trumpet Central',
         logo: {
           alt: 'My Site Logo',
-          src: 'img/banner-icon.png',
+          src: 'img/logo-nobg.png',
         },
         items: [
           {
@@ -114,11 +114,7 @@ const config = {
             items: [
               {
                 label: 'Getting Started',
-                to: '/docs/getting-started',
-              },
-              {
-                label: 'Resources',
-                to: '/docs/resources',
+                to: '/docs/welcome',
               },
               {
                 label: 'Blog',
