@@ -1,7 +1,7 @@
 ---
 id: practicing-the-trumpet
 title: Practicing the Trumpet
-description: Practicing the trumpet 
+description: How to best practice the trumpet 
 slug: /practicing-the-trumpet
 sidebar_position: 3
 ---

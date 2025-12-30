@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Trumpet Central',
-  tagline: 'This is a work in progress...',
+  tagline: 'Website dedicated to learning, exploring, and enjoying the art of the trumpet.',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -119,6 +119,10 @@ const config = {
               {
                 label: 'Blog',
                 to: '/blog',
+              },
+                            {
+                label: 'Release Notes',
+                to: '/release-notes',
               },
             ],
           },
