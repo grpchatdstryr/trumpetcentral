@@ -12,3 +12,5 @@ My lips are notoriously dry and chapped. Even in the summer time I use lip balm.
 While honestly it is kind of overpriced for lip balm, it does work well using it while playing the trumpet. For other trumpet players with extremely dry lips like me, could be worth looking into.
 
 *I am not sponsored by them in any way, shape or form, just have used their product and liked it.*
+
+<!-- truncate -->
