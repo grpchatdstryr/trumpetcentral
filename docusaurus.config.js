@@ -154,6 +154,10 @@ const config = {
                 label: 'GitHub',
                 href: 'https://github.com/grpchatdstryr/trumpetcentral',
               },
+              {
+                label: 'Nerd Stuff',
+                href: '/tech-stuff',
+              },
             ],
           },
         ],

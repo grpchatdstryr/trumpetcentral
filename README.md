@@ -1,5 +1,11 @@
 ### Trumpet Central Website
 
-Under developement for a website all about the trumpet. Just a fun side project.
+Passion project website dedicated to learning, exploring, and enjoying the art of the trumpet.
 
-More to come hopefully soon...
+More coming soon...
+
+https://trumpetcentral.org
+
+![Image of website homescreen](/static/img/homepage.png)
+
+*Image of homepage*
