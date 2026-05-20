@@ -105,7 +105,7 @@ function HomepageHero() {
       </div>
       <div className="container">
         {/* Small label above the title */}
-        <div className={styles.heroEyebrow}>The Art of the Trumpet</div>
+        <div className={styles.heroEyebrow}>Under Development</div>
         <Heading as="h1" className={styles.heroTitle}>
           Trumpet Central
         </Heading>
