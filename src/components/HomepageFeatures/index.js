@@ -1,46 +1,51 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
+import Link from '@docusaurus/Link';
 import styles from './styles.module.css';
 
+// ─── Feature cards ────────────────────────────────────────────────────────────
+// Edit icon, title, description, link, and linkText for each card.
+// link can be an internal path (/docs, /blog) or a full URL.
+// To add a card: copy one object and add it to the array.
 const FeatureList = [
   {
+    icon: '🎺',
     title: 'Learn the Trumpet',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Website dedicated to helping you get started with the trumpet.
-      </>
-    ),
+    description:
+      'Website dedicated to helping you get started with the trumpet.',
+    link: '/docs',
+    linkText: 'Browse Lessons',
   },
   {
+    icon: '🔥',
     title: 'Inspire Passion',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-       Goal to motivate and become passionate about the instrument, not making it burdensome.
-      </>
-    ),
+    description:
+      'Goal to motivate and become passionate about the instrument, not making it burdensome.',
+    link: '/blog',
+    linkText: 'Read the Blog',
   },
   {
+    icon: '🎵',
     title: 'Free of Charge',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        A passion project, built to assist fellow trumpet players and have fun, not to make money.
-      </>
-    ),
+    description:
+      'A passion project, built to assist fellow trumpet players and have fun, not to make money.',
+    link: 'https://www.youtube.com/@trumpetcentral',
+    linkText: 'Watch on YouTube',
   },
 ];
 
-function Feature({Svg, title, description}) {
+function Feature({ icon, title, description, link, linkText }) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <div className={clsx('col col--4', styles.featureCol)}>
+      <div className={styles.featureCard}>
+        <div className={styles.featureIcon}>{icon}</div>
+        <Heading as="h3" className={styles.featureTitle}>
+          {title}
+        </Heading>
+        <p className={styles.featureDesc}>{description}</p>
+        <Link to={link} className={styles.featureLink}>
+          {linkText} →
+        </Link>
       </div>
     </div>
   );
@@ -50,6 +55,13 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
+        <div className={styles.sectionHeader}>
+          {/* Section heading — edit text directly here */}
+          <h2 className={styles.sectionTitle}>Why Trumpet Central?</h2>
+          <p className={styles.sectionSubtitle}>
+            Everything you need to start and enjoy your trumpet journey
+          </p>
+        </div>
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

@@ -1,23 +1,188 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
+/* ─── Hero background ────────────────────────────────────────────────────────
+   Edit the two hex values to change the hero color.
+   Keep them in the dark-amber family so they match the gold theme.
+   #141008 = dark edges, #241a03 = slightly warmer center. */
 .heroBanner {
-  padding: 4rem 0;
-  text-align: center;
   position: relative;
+  padding: 8rem 2rem 7rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #141008 0%, #241a03 55%, #141008 100%);
+  color: #fff;
+  contain: layout style;
+}
+
+/* Horizontal staff lines across the hero */
+.heroBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 34px,
+    rgba(211, 158, 0, 0.05) 34px, /* increase 0.05 to make lines more visible */
+    rgba(211, 158, 0, 0.05) 35px
+  );
+  pointer-events: none;
+}
+
+/* Warm glow pooled at the bottom of the hero */
+.heroBanner::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 160px;
+  background: radial-gradient(ellipse, rgba(211, 158, 0, 0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ─── Mouse spotlight ────────────────────────────────────────────────────────
+   width/height = size of the blob (larger = more diffuse)
+   0.07 = brightness — 0.05 is barely visible, 0.15 is noticeable */
+.heroSpotlight {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 800px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, rgba(211, 158, 0, 0.07) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  will-change: transform;
+}
+
+.heroNotes {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
   overflow: hidden;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* ─── Shared note styles ─────────────────────────────────────────────────────
+   opacity: how visible all notes are (0.1 = subtle, 0.3 = more visible)
+   translate easing: how snappily notes follow the mouse (0.6s = smooth lag) */
+.note {
+  position: absolute;
+  color: rgba(211, 158, 0, 0.18);
+  user-select: none;
+  opacity: 0.2;
+  will-change: transform;
+  animation: floatNote 9s ease-in-out infinite;
+  translate: var(--note-x, 0px) var(--note-y, 0px);
+  transition: translate 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.buttons {
+/* ─── Per-note position, size & timing ───────────────────────────────────────
+   top/left    = position in the hero (%)
+   font-size   = how large the note appears
+   delay       = stagger so they don't all move together
+   duration    = length of one float cycle — mix values so they desync naturally */
+.note1  { top: 10%; left: 4%;  font-size: 3.2rem; animation-delay: 0s;    animation-duration: 9s;  }
+.note2  { top: 22%; left: 88%; font-size: 2.2rem; animation-delay: 1.8s;  animation-duration: 11s; }
+.note3  { top: 58%; left: 7%;  font-size: 2.8rem; animation-delay: 3.5s;  animation-duration: 10s; }
+.note4  { top: 68%; left: 84%; font-size: 2rem;   animation-delay: 2.2s;  animation-duration: 8s;  }
+.note5  { top: 38%; left: 93%; font-size: 2.4rem; animation-delay: 5s;    animation-duration: 13s; }
+.note6  { top: 80%; left: 50%; font-size: 1.8rem; animation-delay: 0.9s;  animation-duration: 9s;  }
+.note7  { top: 6%;  left: 52%; font-size: 2.5rem; animation-delay: 4.2s;  animation-duration: 10s; }
+.note8  { top: 46%; left: 27%; font-size: 1.7rem; animation-delay: 6.5s;  animation-duration: 14s; }
+.note9  { top: 74%; left: 19%; font-size: 2.1rem; animation-delay: 2.8s;  animation-duration: 11s; }
+.note10 { top: 18%; left: 67%; font-size: 1.9rem; animation-delay: 7.2s;  animation-duration: 9s;  }
+
+/* translateY(-18px) = how high notes drift — increase for bigger float movement */
+@keyframes floatNote {
+  0%,  100% { transform: translateY(0px)   rotate(-6deg); }
+  50%        { transform: translateY(-18px) rotate(6deg);  }
+}
+
+/* ─── Eyebrow label (pill above the title) ───────────────────────────────────
+   Change the text in index.js. Edit styles here. */
+.heroEyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ifm-color-primary);
+  background: rgba(211, 158, 0, 0.1);
+  border: 1px solid rgba(211, 158, 0, 0.28);
+  padding: 0.4rem 1.1rem;
+  border-radius: 999px;
+  margin-bottom: 1.6rem;
+}
+
+.heroTitle {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  line-height: 1.08;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 580px;
+  margin: 0 auto 2.75rem;
+  line-height: 1.75;
+}
+
+.heroButtons {
   display: flex;
-  align-items: center;
+  gap: 1rem;
   justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ─── Primary (gold) button ──────────────────────────────────────────────────
+   background color pulls from --ifm-color-primary in custom.css */
+.primaryButton {
+  background: var(--ifm-color-primary) !important;
+  border: none !important;
+  color: #141008 !important;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.primaryButton:hover {
+  background: #febd02 !important;
+  color: #141008 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(211, 158, 0, 0.35);
+  text-decoration: none;
+}
+
+/* ─── Secondary (outline) button ─────────────────────────────────────────────*/
+.secondaryButton {
+  background: transparent !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.3) !important;
+  color: rgba(255, 255, 255, 0.88) !important;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.secondaryButton:hover {
+  border-color: rgba(211, 158, 0, 0.65) !important;
+  background: rgba(211, 158, 0, 0.08) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* ─── Mobile — notes that hide on small screens ──────────────────────────────
+   Add/remove note classes here to control what shows below 996px */
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 5rem 1.5rem 4.5rem;
+  }
+  .note2, .note4, .note5, .note8, .note10 {
+    display: none;
+  }
 }
