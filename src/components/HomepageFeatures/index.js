@@ -13,7 +13,7 @@ const FeatureList = [
     title: 'Learn the Trumpet',
     description:
       'Website dedicated to helping you get started with the trumpet.',
-    link: '/docs',
+    link: '/docs/welcome',
     linkText: 'Browse Lessons',
   },
   {
