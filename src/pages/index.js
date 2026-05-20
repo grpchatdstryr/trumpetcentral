@@ -114,7 +114,7 @@ function HomepageHero() {
         </p>
         <div className={styles.heroButtons}>
           {/* to="/docs" links to the learning section; change to any path or URL */}
-          <Link className={clsx('button button--lg', styles.primaryButton)} to="/docs">
+          <Link className={clsx('button button--lg', styles.primaryButton)} to="/docs/welcome">
             Start Learning
           </Link>
           <Link
