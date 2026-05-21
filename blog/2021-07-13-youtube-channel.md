@@ -3,6 +3,7 @@ slug: youtube-channel
 title: YouTube Channel
 authors: [nathanpatrick]
 tags: [trumpet]
+description: Trumpet Central YouTube channel announcement — video lessons, tips, and trumpet content for players of all levels.
 ---
 
 Created a YouTube channel to talk about all trumpet related things. Would be a fun thing to do. 

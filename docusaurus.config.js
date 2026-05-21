@@ -11,8 +11,55 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Trumpet Central',
-  tagline: 'Website dedicated to learning, exploring, and enjoying the art of the trumpet.',
+  tagline: 'Free trumpet lessons, tips, and guides for beginners. Learn how to play trumpet the right way.',
   favicon: 'img/favicon.ico',
+
+  headTags: [
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Trumpet Central',
+        url: 'https://trumpetcentral.org',
+        description: 'Free trumpet lessons, tips, and guides for beginners. Learn how to play trumpet the right way.',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://trumpetcentral.org/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string',
+        },
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Trumpet Central',
+        url: 'https://trumpetcentral.org',
+        logo: 'https://trumpetcentral.org/img/logo-nobg.png',
+        sameAs: [
+          'https://youtube.com/@trumpetcentral',
+          'https://www.instagram.com/trumpet_central',
+          'https://linktr.ee/trumpetcentral',
+        ],
+      }),
+    },
+    {
+      tagName: 'script',
+      attributes: { type: 'application/ld+json' },
+      innerHTML: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'EducationalOrganization',
+        name: 'Trumpet Central',
+        url: 'https://trumpetcentral.org',
+        description: 'Free trumpet lessons and guides for beginners learning how to play trumpet.',
+        teaches: 'Trumpet playing technique, music theory, and practice strategies',
+      }),
+    },
+  ],
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -72,6 +119,13 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+        sitemap: {
+          lastmod: 'date',
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**', '/search'],
+          filename: 'sitemap.xml',
+        },
       }),
     ],
   ],
@@ -87,7 +141,7 @@ const config = {
       navbar: {
         title: 'Trumpet Central',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'Trumpet Central Logo',
           src: 'img/logo-nobg.png',
         },
         items: [

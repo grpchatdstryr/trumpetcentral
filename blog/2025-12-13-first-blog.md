@@ -3,6 +3,7 @@ slug: new-blog
 title: Brand New Blog Page
 authors: [nathanpatrick]
 tags: [trumpet]
+description: The Trumpet Central blog is live — covering trumpet technique, gear recommendations, practice strategies, and stories from the world of brass playing.
 ---
 
 ### Welcome to the New Blog! 🎺

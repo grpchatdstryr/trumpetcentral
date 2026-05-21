@@ -131,8 +131,8 @@ function HomepageHero() {
 export default function Home() {
   return (
     <Layout
-      title="Home"
-      description="Website dedicated to learning, exploring, and enjoying the art of the trumpet.">
+      title="Learn How to Play Trumpet | Free Lessons & Tips for Beginners"
+      description="Trumpet Central is your free guide to learning the trumpet. Step-by-step lessons, practice tips, gear recommendations, and more for beginners and advancing players.">
       <HomepageHero />
       <main>
         <HomepageFeatures />

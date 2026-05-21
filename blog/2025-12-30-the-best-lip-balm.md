@@ -3,6 +3,7 @@ slug: best-lip-balm-for-trumpet-players
 title: Best Lip Balm for Trumpet Players
 authors: [nathanpatrick]
 tags: [trumpet]
+description: Honest review of ChopSaver lip balm for trumpet players — does it actually work for brass players with dry, chapped lips?
 ---
 
 # Best Lip Balm for Trumpet Players

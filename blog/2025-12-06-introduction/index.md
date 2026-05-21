@@ -3,6 +3,7 @@ slug: new-website
 title: Trumpet Central Website
 authors: [nathanpatrick]
 tags: [trumpet]
+description: Welcome to Trumpet Central — a free online resource for trumpet lessons, tips, gear reviews, and practice strategies for players of all levels.
 ---
 
 ### Welcome to the New Website! 🎺

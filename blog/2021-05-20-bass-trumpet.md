@@ -3,6 +3,7 @@ slug: bass-trumpet
 title: Bass Trumpet
 authors: nathanpatrick
 tags: [trumpet]
+description: A look at the bass trumpet - what it's like to play one compared to a standard Bb trumpet, and why it's such a unique brass instrument.
 ---
 
 Was in high school and had the chance to play a bass trumpet for a couple months.
