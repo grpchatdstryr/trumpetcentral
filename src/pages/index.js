@@ -110,7 +110,7 @@ function HomepageHero() {
           Trumpet Central
         </Heading>
         <p className={styles.heroSubtitle}>
-          Website dedicated to learning, exploring, and enjoying the art of the trumpet.
+          Learn the trumpet, tips and tricks, without the fluff, all for free.
         </p>
         <div className={styles.heroButtons}>
           {/* to="/docs" links to the learning section; change to any path or URL */}

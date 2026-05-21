@@ -59,7 +59,7 @@ export default function HomepageFeatures() {
           {/* Section heading — edit text directly here */}
           <h2 className={styles.sectionTitle}>Why Trumpet Central?</h2>
           <p className={styles.sectionSubtitle}>
-            Everything you need to start and enjoy your trumpet journey
+            Your go-to "central" resource for everything trumpet
           </p>
         </div>
         <div className="row">
